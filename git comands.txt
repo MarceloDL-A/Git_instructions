@@ -1,0 +1,126 @@
+Básico para atualisar repositório
+Dentro da pasta local digita:
+git add .
+git commit -mm "comentátios"
+git push
+
+Clonar repositório
+git clone endereço_http_do_repositório
+
+Baixar a versão atual do repositório
+git pull
+
+Fazer uma nova ramificação do repositório
+git checkout "comentários"
+
+####################################################
+Definir dados de quem altera o projeto que está no repositório
+git config --global user.name "Marcelo Delmondes de Lima"
+git config --global user.email "marcelo.delmondes.lima@usp.br"
+git config --global core.editor editor_utilizado
+
+
+Verificar as informações
+git config user.name
+git config --list
+
+
+####################################################
+Criando um novo repositório
+Navegue par a pasta local que armazena a versão do projeto
+cd loca_do_arquivo
+
+Listar arquivos da pasta atual
+dir
+tree /f
+
+Subir um nível de diretório
+cd ..
+cd ../
+
+Criar uma pasta
+mkdir nome_da_pasta
+
+
+####################################################
+Iniciar repositório (localmente, para depois poder ser sincronizado com o site do github)
+Criar arquivo .git
+git init
+
+Acessar .git
+cd .git
+
+Listar conteúdo do .git
+ls
+
+######################################################
+Para adicionar arquivos novos no git
+Verificar o que existe an pasta local:
+git status
+
+Adicionar arquivos ao git. Primeiro adiciona os arquivos que ser quer commitar:
+git add nome_do_arquivo
+
+Para adicionar todos os arquivos que não estão trackeados
+gir add -A
+
+Para commitar
+git commit -m "comentário"
+
+Virificar todos os commits que foram feitos no branch atual
+git log
+
+
+
+########################################################
+Verificar o log de commits
+git log
+
+Saber o branch atual
+git branch
+
+Verificar o estado atual dos arquivos
+git status
+
+Adicionar arquivos e commitar ao mesmo tempo
+git commit -am "comentários"
+
+
+########################################################
+Voltar para um commit anterior. O ideal é voltar com o --soft
+git log
+
+Copia-se o código inteiro do commit ou apenas os 7 primeiros digitos
+Volta mas mantêm alterações posteriores ao referido commit não commitadas
+git reset --soft codigo_do_commmit
+
+Volta mas mantêm alterações posteriores ao referido commit não addi e não commitadas
+git reset --mixed codigo_do_commmit
+
+Ignorar todos os commits posteriores e deletas os arquivos não commitados
+git reset --hard codigo_do_commmit
+
+
+########################################################
+Criação de um novo branch para trabalhar com o estado atual. Quando criamos um novo branch o projeto atual é importado para esse novo branch.
+git branch nome_do_novo_branch
+
+Checar o branch atual
+git branch
+
+Mudar de branch
+git checkout branch
+
+Checar o branch atual
+git branch
+
+Inserção de novar informações no branch novo
+git commit -am "comentários"
+
+Voltar para o branch master
+git checkout master
+
+###########################################################
+Verificar quais alterações foram feitas detalhadamente
+git diff
+
